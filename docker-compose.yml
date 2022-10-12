@@ -34,7 +34,7 @@ services:
     volumes:
       - ${DATA_PATH_HOST}/mongo:/data/db
       - ${DATA_PATH_HOST}/mongo_config:/data/configdb
-      # init-mongo.js文件会在 mongodb 容器初始化完成之后执行，给数据库创建默认的角色
+      # init-mongo.js 文件会在 mongodb 容器初始化完成之后执行，给数据库创建默认的角色
       # - ./mongo/init-mongo.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
       - ./mongo/init-mongo.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
     networks:
